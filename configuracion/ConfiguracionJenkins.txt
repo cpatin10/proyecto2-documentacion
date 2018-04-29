@@ -1,0 +1,21 @@
+1. Instalar plugin Unity3d
+2. Dentro de "Global Tool Configuration" añadir instalación de Unity3D
+    - Nombre: <nombre configuración Unity>
+    - Directorio de instalación: <directorio donde se encuentra instalado Unity>
+3. Crear el job configurando:
+    - Nombre del proyecto: <nombre del job para jenkins>
+    - Proyecto de GitHub: <URL del repositorio>
+    - Gestión del código fuente: Git:
+        - URL del repositorio: <URL del repositorio>
+        - Credenciales: ninguna
+        - Rama: */master
+        - Comportamientos adicionales: Timeout (en minutos) para operaciones clone y fetch: 40
+    - Triggers del build: GhiHubt hook trigger for GITScm polling
+    - Build: Añadir paso: Invoke Unity3d Editor
+        - Nombre de la instalación de Unity: <nombre configuración Unity>
+        - Argumentos de la línea de comando: "-quit -batchmode -logFile=C:\Users\cpatin10\AppData\Local\Unity\Editor\Editor.log -projectPath=C:\Program Files (x86)\Jenkins\Workspace\EntrenamientoAuditivo\EntrenamientoAuditivoUnity -executeMethod=BuildScript.PerformWindowsBuild -nographic" 
+    - Acciones post-build:
+        - E-mail notification:
+            - Recipiente: <correo electrónico>
+            - Enviar e-mail después de cada build inestable
+    
