@@ -11,9 +11,8 @@
         - Rama: */master
         - Comportamientos adicionales: Timeout (en minutos) para operaciones clone y fetch: 40
     - Triggers del build: GhiHubt hook trigger for GITScm polling
-    - Build: Añadir paso: Invoke Unity3d Editor
-        - Nombre de la instalación de Unity: <nombre configuración Unity>
-        - Argumentos de la línea de comando: "-quit -batchmode -logFile=C:\Users\cpatin10\AppData\Local\Unity\Editor\Editor.log -projectPath=C:\Program Files (x86)\Jenkins\Workspace\EntrenamientoAuditivo\EntrenamientoAuditivoUnity -executeMethod=BuildScript.PerformWindowsBuild -nographic" 
+    - Build: Añadir paso: Execute Windows batch Command
+        - Command: ejecutar script compilar.bat (https://github.com/cpatin10/EntrenamientoAuditivo/blob/master/compilar.bat)
     - Acciones post-build:
         - E-mail notification:
             - Recipiente: <correo electrónico>
