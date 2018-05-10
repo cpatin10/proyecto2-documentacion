@@ -1,8 +1,4 @@
-1. Instalar plugin Unity3d
-2. Dentro de "Global Tool Configuration" añadir instalación de Unity3D
-    - Nombre: <nombre configuración Unity>
-    - Directorio de instalación: <directorio donde se encuentra instalado Unity>
-3. Crear el job configurando:
+1. Crear el job configurando:
     - Nombre del proyecto: <nombre del job para jenkins>
     - Proyecto de GitHub: <URL del repositorio>
     - Gestión del código fuente: Git:
